@@ -14,6 +14,16 @@ create table `managers`(
   PRIMARY KEY (`man_id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_bin ROW_FORMAT = Compact;
 
+DROP TABLE IF EXISTS `customer`;
+create table `customer`(
+  `cus_id` int(11) NOT NULL AUTO_INCREMENT,
+  `cus_name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
+  `cus_tel` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
+  `cus_pwd` text CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL COMMENT '登陆密码',
+
+
+  PRIMARY KEY (`cus_id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_bin ROW_FORMAT = Compact;
 
 DROP TABLE IF EXISTS `homeapps`;
 create table `homeapps`(
